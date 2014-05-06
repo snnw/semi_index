@@ -309,7 +309,19 @@ void bson_parse_mapped(const char* bson_file, const char* paths_spec)
 int main(int argc, char** argv)
 {
     if (argc < 2) {
-	std::cerr << "No command given" << std::endl;
+	std::cerr << "No command given" << std::endl
+                  << std::endl
+                  << "Possible commands are:" << std::endl
+                  << "- nop_stream" << std::endl
+                  << "- naive_parse_stream" << std::endl
+                  << "- si_parse_stream" << std::endl
+                  << "- si_save" << std::endl
+                  << "- saved_si_parse_stream" << std::endl
+                  << "- saved_si_parse_mapped" << std::endl
+                  << "- compress_file" << std::endl
+                  << "- saved_si_parse_compressed" << std::endl
+                  << "- bson_save" << std::endl
+                  << "- bson_parse_mapped" << std::endl;
 	exit(1);
     }
 	
